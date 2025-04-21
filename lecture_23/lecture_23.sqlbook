@@ -36,6 +36,7 @@ panel on the left:
 
 Delete existing table
 -- SQLBook: Code
+-- Active: 1744807948897@@127.0.0.1@5432@postgres
 -- Active: 1710903290079@@127.0.0.1@5432@postgres
 -- If the table already exists we can drop it:
 -- If it doesn't exist nothing happens
@@ -101,7 +102,9 @@ Try it yourself!
 -- Make sure to deparate arguments by a semicolon!
 
 
+INSERT INTO drivers  VALUES (5, 'Mia Sager', 'American',67);
 
+INSERT INTO drivers  VALUES (6, 'Joanna Gould', 'American',6);
 
 -- SQLBook: Markup
 # <span style="color:darkblue"> II. Dataset Operations </span>
@@ -189,7 +192,8 @@ with more than 60 victories
 -- SQLBook: Code
 -- Write your own code!
 
-
+SELECT nationality, driver_id FROM drivers
+WHERE victories > 60;
 
 -- SQLBook: Markup
 # <span style="color:darkblue"> III. Groupby + Chaining </span>
